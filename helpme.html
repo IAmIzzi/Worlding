@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>help</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta charset="utf-8"/>
+  </head>
+
+<style>
+
+    body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    background-color: black;
+    /* background-image: url(https://i.imgur.com/5KMPMz5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+  }
+
+    img{
+      width: 50%;
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%)
+    }
+
+    @font-face {
+    src: url(fonts/Retro\ Gaming.ttf);
+    font-family: Retro;
+  }
+
+  h1{
+    font-family: Retro;
+    color:red;
+    text-align: center;
+
+  }
+
+.below{
+    position:absolute;
+    bottom:8px;
+    left:20px;
+}
+
+.theDiv{
+    margin: auto;
+    width: 10%;
+    height: 10%;
+    content: url(https://i.imgur.com/1PXZEsk.png);
+    left:100%;
+    top:100%;
+}
+</style>
+
+<body onload="move('theDiv')">
+
+
+    <img src="https://i.imgur.com/Hukj601.png">
+
+
+  <a href="pileoftrash.html" target="_self">
+    <h1> HELP ME</h1>
+</a>
+
+<a href="FEESH.html" target="_self">
+    <div class="below"> ║▌║█║▌│║▌║▌█</div>
+</a>
+
+
+<div id="theDiv" class="theDiv"></div>
+<script>
+  var dragValue;
+
+  function move(id){
+    var element = document.getElementById("theDiv");
+    element.style.position = "absolute";
+    element.onmousedown = function(){
+      dragValue = element;
+    }
+  }
+
+  document.onmouseup = function(e){
+    dragValue = null;
+  }
+  document.onmousemove = function(e){
+    var x = e.pageX;
+    var y = e.pageY;
+
+    dragValue.style.left = x - 100 + "px";
+    dragValue.style.top = y - 100 + "px";
+  }
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Untitled</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta charset="utf-8"/>
+  </head>
+
+<style>
+
+    body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    background-color:darkblue;
+    background-image: url(https://i.imgur.com/ozWyNQ3.jpg);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size:contain;
+  }
+
+    img{
+    width: 100%;
+    height:100%;
+    }
+
+    h1{
+      color:BLACK;
+      font-size:xx-large;
+      position:absolute;
+      top:90%;
+      left:27%;
+      background-color: white;
+    }
+
+    h1:hover{
+        color:firebrick;
+    }
+
+    .theDiv{
+    margin: auto;
+    width: 20%;
+    height: 20%;
+    content: url(https://i.imgur.com/1PXZEsk.png);
+    /* left:100%;
+    top:100%; */
+}
+
+</style>
+
+<body onload="move('theDiv')">
+
+    <a href="index.html" target="_self">
+    
+        <h1>THE FISH THANK YOU FOR YOUR PATRONAGE</h1>
+    
+      </a>
+
+    <div id="theDiv" class="theDiv"></div>
+<script>
+  var dragValue;
+
+  function move(id){
+    var element = document.getElementById("theDiv");
+    element.style.position = "absolute";
+    element.onmousedown = function(){
+      dragValue = element;
+    }
+  }
+
+  document.onmouseup = function(e){
+    dragValue = null;
+  }
+  document.onmousemove = function(e){
+    var x = e.pageX;
+    var y = e.pageY;
+
+    dragValue.style.left = x - 100 + "px";
+    dragValue.style.top = y - 100 + "px";
+  }
+</script>
+</body>
+
+
+</html>
