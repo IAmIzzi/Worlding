@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styleTRASH.css">
+</head>
+
+
+<body onload="move('theDiv')">
+
+  <a href="NewGame.html" target="_self">    
+    <p class="p">good job :)</p>
+  </a>
+  
+  <div id="theDiv" class="theDiv"></div>
+  
+  <script>
+    var dragValue;
+
+    function move(id){
+      var element = document.getElementById("theDiv");
+      element.style.position = "absolute";
+      element.onmousedown = function(){
+        dragValue = element;
+      }
+    }
+
+    document.onmouseup = function(e){
+      dragValue = null;
+    }
+    document.onmousemove = function(e){
+      var x = e.pageX;
+      var y = e.pageY;
+
+      dragValue.style.left = x - 200 + "px";
+      dragValue.style.top = y - 200 + "px";
+    }
+  </script>
+  
+    <div class="bg"></div>
+
+</body>
+
+
+
+</html>
+ 

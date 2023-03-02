@@ -1,0 +1,50 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+
+  .theDiv{
+    margin: auto;
+    width: 500px;
+    height: 300px;
+    content: url(https://i.imgur.com/G03Xhhg.png);
+
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position:absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;  */
+  }
+
+
+
+  .bg {
+    /* The image used */
+    background-image: url("https://i.imgur.com/qR3xbH4.jpg");
+  
+    /* Full height */
+    height: 100%;
+    width: 100%;
+    margin: auto;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  .p{
+    font-family: Retro, sans-serif;
+    font-size:medium;
+    position:fixed;
+    color:blue;
+    bottom:0;
+  }
