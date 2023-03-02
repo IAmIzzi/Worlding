@@ -36,3 +36,12 @@ img{
   right:87%;
   content: url(https://i.imgur.com/zs41XHa.png)
 }
+
+h1{
+  position: absolute;
+  font-size: xx-large;
+  color:blue;
+  top:40%;
+  left:5%;
+
+}
